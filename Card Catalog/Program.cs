@@ -8,5 +8,32 @@ namespace Card_Catalog
         {
             Console.WriteLine("Hello Dan!");
         }
+
+        public class Book
+        {
+            public string Title
+            {
+                get;
+                set;
+            }
+
+            public string Author
+            {
+                get;
+                set;
+            }
+
+            public string ISBN
+            {
+                get;
+                set;
+            }
+
+            public string PublicationYear
+            {
+                get;
+                set;
+            }
+        }
     }
 }
