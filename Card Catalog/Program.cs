@@ -6,7 +6,38 @@ namespace Card_Catalog
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Dan!");
+            bool displayMenu = true;
+            while (displayMenu)
+            {
+                displayMenu = MainMenu();
+            }
+        }
+        private static bool MainMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Choose an option:");
+            Console.WriteLine("1) List all books");
+            Console.WriteLine("2) Add a book");
+            Console.WriteLine("3) Save and Exit");
+            string result = Console.ReadLine();
+            if (result == "1")
+            {
+                ListAllBooks();
+                return true;
+            }
+            else if (result == "2")
+            {
+                AddABook();
+                return true;
+            }
+            else if (result == "3")
+            {
+                return false; //Need to add a method that saves then exits (serialization)
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
