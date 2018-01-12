@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Application
 {
@@ -53,11 +55,14 @@ namespace Application
             Console.ReadLine();
         }
 
-        /*
-        public ?? Save()
+        public void Save(string fileName)
         {
-
+            using (var stream = new FileStream(fileName, FileMode.Create))
+            {
+                XmlSerializer XML = new XmlSerializer(typeof(List<Book>));
+                XML.Serialize(stream, this.BookList);
+            }
+                
         }
-        */
     }
 }

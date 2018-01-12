@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace Card_Catalog
 {
     class Program
@@ -36,7 +37,8 @@ namespace Card_Catalog
             }
             else if (result == "3")
             {
-                return false; //Need to add a method that saves then exits (serialization)
+                cc.Save("Library.xml");
+                return false;
             }
             else
             {
