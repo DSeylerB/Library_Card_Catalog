@@ -46,22 +46,14 @@ namespace Application
                 XML.Serialize(stream, this.BookList);
             }
         }
-
-        public List<Book> Load(string fileName)
+                
+        public void Load(string fileName)
         {
             using (var stream = new FileStream(fileName, FileMode.Open))
             {
                 XmlSerializer XML = new XmlSerializer(typeof(List<Book>));
-                return(List<Book>)XML.Deserialize(stream);
+                BookList = (List<Book>)XML.Deserialize(stream);
             }
         }
-
-        /* Amon's suggestion
-         List < Book > book = null;
-                XmlSerializer XML = new XmlSerializer(typeof(List<Book>));
-                book = (List<Book>)XML.Deserialize(stream);
-
-                return book;
-         */
     }
 }

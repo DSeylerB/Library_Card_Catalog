@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <ArrayOfBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Book>
-    <Title>1</Title>
-    <Author>1</Author>
-    <ISBN>1</ISBN>
-    <PublicationYear>1</PublicationYear>
+    <Title>4</Title>
+    <Author>4</Author>
+    <ISBN>4</ISBN>
+    <PublicationYear>4</PublicationYear>
   </Book>
   <Book>
     <Title>2</Title>
