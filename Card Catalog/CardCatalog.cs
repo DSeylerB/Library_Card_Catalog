@@ -3,18 +3,20 @@ using System.Collections.Generic;
 
 namespace Application
 {
-    public class CardCatalog
+    public class CardCatalog : Book
     {
-        List<Book> booklist = new List<Book>();
-        //booklist.foreach to ist all books
+        List<Book> BookList = new List<Book>();
+        //booklist.foreach to list all books
 
+        /*
         public void AddABook()
         {
-            booklist.Add(new Book());
+            BookList.Add(new Book());
 
         }
+        */
 
-        private static string AddABook(string title, string author, string isbn, string pubYear)
+        public void AddABook(string title, string author, string isbn, string pubYear)
         {
             this.Title = title;
             this.Author = author;
@@ -30,14 +32,22 @@ namespace Application
             Console.WriteLine("Enter Publication Year: ");
             pubYear = Console.ReadLine();
 
+            BookList.Add(new Book(title, author, isbn, pubYear));
 
-            return;
+            //return;
         }
+
+        
 
         public string ListAllBooks()
         {
             //var list = new List<string>(Enumerable.Range(0, 50));
             //list.ForEach(Console.WriteLine)
+        }
+
+        public ?? Save()
+        {
+
         }
     }
 }

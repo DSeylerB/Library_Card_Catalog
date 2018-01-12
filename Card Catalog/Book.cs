@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Application
 {
-    class Book
+    public class Book
     {
         public string Title
         {
