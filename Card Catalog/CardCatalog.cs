@@ -8,20 +8,9 @@ namespace Application
     public class CardCatalog : Book
     {
         List<Book> BookList = new List<Book>();
-        //booklist.foreach to list all books
-
-        /*
+        
         public void AddABook()
         {
-            BookList.Add(new Book());
-
-        }
-        */
-
-        public void AddABook()
-        {
-            
-
             Console.WriteLine("Enter Title: ");
             Title = Console.ReadLine();
             Console.WriteLine("Enter Author: ");
@@ -32,13 +21,9 @@ namespace Application
             PublicationYear = Console.ReadLine();
 
             BookList.Add(new Book(Title, Author, ISBN, PublicationYear));
-
-
             //return;
         }
-
-        
-
+                
         public void ListAllBooks()
         {
             foreach (var Book in BookList)
@@ -48,8 +33,6 @@ namespace Application
                     Book.Author, 
                     Book.ISBN, 
                     Book.PublicationYear);
-
-               
             }
             Console.WriteLine("Press the Enter key to return to the menu");
             Console.ReadLine();
@@ -62,7 +45,23 @@ namespace Application
                 XmlSerializer XML = new XmlSerializer(typeof(List<Book>));
                 XML.Serialize(stream, this.BookList);
             }
-                
         }
+
+        public List<Book> Load(string fileName)
+        {
+            using (var stream = new FileStream(fileName, FileMode.Open))
+            {
+                XmlSerializer XML = new XmlSerializer(typeof(List<Book>));
+                return(List<Book>)XML.Deserialize(stream);
+            }
+        }
+
+        /* Amon's suggestion
+         List < Book > book = null;
+                XmlSerializer XML = new XmlSerializer(typeof(List<Book>));
+                book = (List<Book>)XML.Deserialize(stream);
+
+                return book;
+         */
     }
 }

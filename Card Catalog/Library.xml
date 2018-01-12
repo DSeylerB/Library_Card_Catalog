@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ArrayOfBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Book>
+    <Title>1</Title>
+    <Author>1</Author>
+    <ISBN>1</ISBN>
+    <PublicationYear>1</PublicationYear>
+  </Book>
+  <Book>
+    <Title>2</Title>
+    <Author>2</Author>
+    <ISBN>2</ISBN>
+    <PublicationYear>2</PublicationYear>
+  </Book>
+  <Book>
+    <Title>3</Title>
+    <Author>3</Author>
+    <ISBN>3</ISBN>
+    <PublicationYear>3</PublicationYear>
+  </Book>
+</ArrayOfBook>
