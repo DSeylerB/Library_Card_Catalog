@@ -16,38 +16,48 @@ namespace Application
         }
         */
 
-        public void AddABook(string title, string author, string isbn, string pubYear)
+        public void AddABook()
         {
-            this.Title = title;
-            this.Author = author;
-            this.ISBN = isbn;
-            this.PublicationYear = pubYear;
+            
 
             Console.WriteLine("Enter Title: ");
-            title = Console.ReadLine();
+            Title = Console.ReadLine();
             Console.WriteLine("Enter Author: ");
-            author = Console.ReadLine();
+            Author = Console.ReadLine();
             Console.WriteLine("Enter ISBN: ");
-            isbn = Console.ReadLine();
+            ISBN = Console.ReadLine();
             Console.WriteLine("Enter Publication Year: ");
-            pubYear = Console.ReadLine();
+            PublicationYear = Console.ReadLine();
 
-            BookList.Add(new Book(title, author, isbn, pubYear));
+            BookList.Add(new Book(Title, Author, ISBN, PublicationYear));
+
 
             //return;
         }
 
         
 
-        public string ListAllBooks()
+        public void ListAllBooks()
         {
-            //var list = new List<string>(Enumerable.Range(0, 50));
-            //list.ForEach(Console.WriteLine)
+            foreach (var Book in BookList)
+            {
+                Console.WriteLine("Title: {0}, Author: {1}, ISBN #: {2}, Publication Year: {3}", 
+                    Book.Title, 
+                    Book.Author, 
+                    Book.ISBN, 
+                    Book.PublicationYear);
+
+               
+            }
+            Console.WriteLine("Press the Enter key to return to the menu");
+            Console.ReadLine();
         }
 
+        /*
         public ?? Save()
         {
 
         }
+        */
     }
 }

@@ -1,19 +1,22 @@
-﻿using System;
+﻿using Application;
+using System;
 using System.Collections.Generic;
 
 namespace Card_Catalog
 {
     class Program
     {
+        static CardCatalog cc = null;
         static void Main(string[] args)
         {
+            cc = new CardCatalog();
             bool displayMenu = true;
             while (displayMenu)
             {
                 displayMenu = MainMenu();
             }
         }
-        private static bool MainMenu()
+        public static bool MainMenu()
         {
             Console.Clear();
             Console.WriteLine("Choose an option:");
@@ -23,12 +26,12 @@ namespace Card_Catalog
             string result = Console.ReadLine();
             if (result == "1")
             {
-                ListAllBooks();
+                cc.ListAllBooks();
                 return true;
             }
             else if (result == "2")
             {
-                AddABook();
+                cc.AddABook();
                 return true;
             }
             else if (result == "3")
