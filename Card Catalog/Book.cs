@@ -1,10 +1,41 @@
 ﻿using System;
-namespace CardCatalog
+using System.Linq;
+
+
+namespace Application
 {
-    public class Book
+    class Book
     {
-        public Book()
+        public string Title
         {
+            get;
+            set;
+        }
+
+        public string Author
+        {
+            get;
+            set;
+        }
+
+        public string ISBN
+        {
+            get;
+            set;
+        }
+
+        public string PublicationYear
+        {
+            get;
+            set;
+        }
+
+        public Book(string title = "", string author = "", string isbn = "", string pubYear = "")
+        {
+            Title = title;
+            Author = author;
+            ISBN = isbn;
+            PublicationYear = pubYear;
         }
     }
 }

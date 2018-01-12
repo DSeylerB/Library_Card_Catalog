@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Application
 {
-    public class CardCatalog : Book
+    public class CardCatalog
     {
-        List<string> booklist = new List<string>();
+        List<Book> booklist = new List<Book>();
         //booklist.foreach to ist all books
 
         public void AddABook()
         {
-            booklist.Add = new Book();
+            booklist.Add(new Book());
 
         }
 
@@ -36,42 +38,6 @@ namespace Application
         {
             //var list = new List<string>(Enumerable.Range(0, 50));
             //list.ForEach(Console.WriteLine)
-        }
-    }
-
-
-    class Book
-    {
-        public string Title
-        {
-            get;
-            set;
-        }
-
-        public string Author
-        {
-            get;
-            set;
-        }
-
-        public string ISBN
-        {
-            get;
-            set;
-        }
-
-        public string PublicationYear
-        {
-            get;
-            set;
-        }
-
-        public Book(string title = "", string author = "", string isbn = "", string pubYear = "")
-        {
-            Title = title;
-            Author = author;
-            ISBN = isbn;
-            PublicationYear = pubYear;
         }
     }
 }
