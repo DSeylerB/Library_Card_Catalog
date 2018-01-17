@@ -21,11 +21,11 @@ namespace Application
             PublicationYear = Console.ReadLine();
 
             BookList.Add(new Book(Title, Author, ISBN, PublicationYear));
-            //return;
         }
                 
         public void ListAllBooks()
         {
+            Console.Clear();
             foreach (var Book in BookList)
             {
                 Console.WriteLine("Title: {0}, Author: {1}, ISBN #: {2}, Publication Year: {3}", 
@@ -49,6 +49,7 @@ namespace Application
                 
         public void Load(string fileName)
         {
+
             using (var stream = new FileStream(fileName, FileMode.Open))
             {
                 XmlSerializer XML = new XmlSerializer(typeof(List<Book>));

@@ -27,6 +27,7 @@ namespace Application
             get;
             set;
         }
+
         public Book() { }
 
         public Book(string title = "", string author = "", string isbn = "", string pubYear = "")
